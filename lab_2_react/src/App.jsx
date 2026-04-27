@@ -10,19 +10,30 @@ import './App.css';
 
 function App() {
   return (
-    <div className="cv-container">
+    <div className="max-w-4xl mx-auto p-4">
       <Header />
-      <main>
-        <About />
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+        <div className="md:col-span-2">
+          <About />
+        </div>
+
         <Education />
         <Experience />
         <Skills />
         <AdditionalInfo />
-        <Contacts />
-      </main>
+
+        <div className="md:col-span-2">
+          <Contacts />
+        </div>
+
+      </div>
+
       <Footer />
     </div>
   );
-}
+};
+
 
 export default App;
