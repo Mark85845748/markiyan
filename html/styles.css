@@ -101,3 +101,123 @@ footer {
         font-size: 28px;
     }
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.modal-content {
+    width: 90%;
+    max-width: 450px;
+    margin: 120px auto;
+    padding: 25px;
+
+    background-color: #ffffff;
+    color: #222222;
+    border-radius: 14px;
+}
+
+.close-btn {
+    float: right;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.modal-content input,
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+}
+
+.modal-content textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.modal-content button[type="submit"] {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+
+    background-color: #222222;
+    color: white;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #0f0f14, #1a1a22);
+    color: #eaeaf0;
+}
+
+/* Картки */
+body.dark section {
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #eaeaf0;
+    box-shadow: none;
+}
+
+body.dark h2 {
+    color: #cfcfe8;
+}
+
+body.dark p,
+body.dark li {
+    color: #bfc3d1;
+}
+
+body.dark a {
+    color: #8ab4ff;
+}
+
+body.dark footer {
+    color: #8b8fa3;
+}
+
+#theme-toggle {
+    margin-top: 12px;
+    padding: 9px 18px;
+    border-radius: 999px; /* pill стиль */
+    border: none;
+
+    background: rgba(0, 0, 0, 0.05);
+    color: #222;
+    font-size: 14px;
+
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+#theme-toggle:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.dark #theme-toggle {
+    background: rgba(255, 255, 255, 0.08);
+    color: #eaeaf0;
+}
+
+body.dark #theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.14);
+}

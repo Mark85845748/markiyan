@@ -13,6 +13,7 @@
             <h1>Фарштей Маркіян</h1>
             <p>Студент</p>
             <p>Місто: Львів</p>
+            <button id="theme-toggle">Перемкнути тему</button>
         </header>
 
         <main class="grid">
@@ -77,6 +78,11 @@
             </section>
 
             <section class="full">
+                <h2>Відгуки попередніх роботодавців</h2>
+                <div id="comments-list"></div>
+            </section>
+
+            <section class="full">
                 <h2>Контакти</h2>
                 <p>Email: <a href="mailto:markiyan@example.com">markiyan@example.com</a></p>
                 <p>Телефон: <a href="tel:+380991112233">+380991112233</a></p>
@@ -86,8 +92,44 @@
 
         <footer>
             <p>2026 © Фарштей Маркіян</p>
+
+            <div id="system-info"></div>
         </footer>
 
+        </div>
+
+        <div id="feedback-modal" class="modal">
+        <div class="modal-content">
+            <button id="close-modal" class="close-btn">Закрити</button>
+
+            <h2>Форма зворотного зв’язку</h2>
+
+            <form action="https://formspree.io/f/mkoyreen" method="POST">
+                <label>
+                    Ім’я:
+                    <input type="text" name="name" required>
+                </label>
+
+                <label>
+                    Email:
+                    <input type="email" name="email" required>
+                </label>
+
+                <label>
+                    Номер телефону:
+                    <input type="tel" name="phone" required>
+                </label>
+
+                <label>
+                    Повідомлення:
+                    <textarea name="message" required></textarea>
+                </label>
+
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
